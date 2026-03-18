@@ -1,14 +1,7 @@
 public class HelloApp {
     public static void main(String[] args) {
 
-        // Default value
-        String name = "World";
-
-        // If user gives input, override default
-        if (args.length > 0) {
-            name = args[0];
-        }
-
+        String name = (args.length == 0) ? "World" : String.join(", ", args);
         System.out.println("Hello, " + name + "!");
     }
 }
